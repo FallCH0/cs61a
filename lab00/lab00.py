@@ -5,5 +5,5 @@ def twenty_twenty_three():
     >>> twenty_twenty_three()
     2023
     """
-    return ______
+    return 2*1000+2*10+3
 
