@@ -11,8 +11,9 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
-
-
+    if k == 0:
+        return 1
+    return n * falling(n-1, k-1)
 def divisible_by_k(n, k):
     """
     >>> a = divisible_by_k(10, 2)  # 2, 4, 6, 8, and 10 are divisible by 2
@@ -34,6 +35,16 @@ def divisible_by_k(n, k):
     0
     """
     "*** YOUR CODE HERE ***"
+    now = 1
+    cnt = 0
+    while now <= n:
+        if now % k == 0:
+            cnt += 1
+            print(now)
+            pass
+        now += 1
+        pass
+    return cnt
 
 
 def sum_digits(y):
@@ -50,7 +61,7 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
-
+    
 
 def double_eights(n):
     """Return true if n has two eights in a row.
